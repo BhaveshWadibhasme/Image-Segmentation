@@ -1,0 +1,25 @@
+The given dataset carries images of Maps and their corresponding mask as part of the train and target dataset.
+As there are images at the input end and output end the model structure is way different and complex compared to traditional image classification CNN.
+The dataset carries over 1000 images for training along with the mask and because of that, I thought image augmentation can be skipped.
+Also by looking at the image data, its quality looks good and image processing like sharpening and enhancing is skipped.
+The images in the given dataset are having a variable size. To handle that resizing is applied. I have resized images to 256x256 because 
+the average original size was more than 1000 Pixels(width and height) was too heavy for my computer.
+The grayscaling operation is performed to reduce the number of channels in the data from 3 to 2 in order to reduce data size and required computation
+power. (This can be increased for better model performance subject to availability of computation power)
+The type of problem and the nature of data shows that the current problem type is Semantic segmentation problem, 
+Where we have two possible classes for each pixel in the dataset. Keeping all these conditions in mind, I went with Unet model
+of image segmentation.
+
+The goal of semantic image segmentation is to label each pixel of an image with a corresponding class of what is being represented. 
+Because we’re predicting for every pixel in the image, this task is commonly referred to as dense prediction.
+Unet is well known image segmentation model for semantic image segmentation.
+
+
+
+Possible parameters that can be tuned are listed below:
+
+Number of filters:    The number of filters in the model architecture can be tuned for better performance.
+Backbone Architecture: The current backbone structure can be updated to the latest architecture such as efficient net
+Epochs:                The number of epochs can be increased to provide more learning to model. 
+Batch Size:            The batch size also seems to have an effect on faster model convergence.(Can be experimented with larger batch size subject to availability of computing power)
+         
