@@ -23,3 +23,4 @@ Backbone Architecture: The current backbone structure can be updated to the late
 Epochs:                The number of epochs can be increased to provide more learning to model. 
 Batch Size:            The batch size also seems to have an effect on faster model convergence.(Can be experimented with larger batch size subject to availability of computing power)
          
+The performance of the model is based on only 100 images which is not true representation of its capabilities. The choice of such a small data and image size is due to limited computation power. whlile evaliating this model please take this scenario in condideration.
